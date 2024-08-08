@@ -6,7 +6,7 @@
 
 datadir=$1
 batch=$2
-ori_bfile_name=$3 		# e.g., six1
+ori_bfile_name=$3 		# e.g., kor1
 ref="/stanley/huang_lab/home/ychen/resources/1kG/ALL.1KG_phase3.20130502.genotypes.maf005"
 preqcdir=${datadir}/preimp_qc
 
