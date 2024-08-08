@@ -69,13 +69,22 @@ $PLINK \
 --make-bed \
 --out ${batch}_geno05_mind02_geno02
 
-awk 'NR==FNR {a[$1""$4""$5""$6] = $0; next} {key = $1""$4""$5""$6; if (key in a) print a[key]; else print $0}' $ref.bim $preqcdir/${batch}_geno05_mind02_geno02.bim > $preqcdir/${batch}_geno05_mind02_geno02_update.bim
-mv $preqcdir/${batch}_geno05_mind02_geno02_update.bim $preqcdir/${batch}_geno05_mind02_geno02.bim
+# 6. update bed-rsid
+$PLINK \
+--bfile $datadir/$ori_bfile_name \
+--extract ${batch}_geno05_mind02_geno02.snplist \
+--keep ${batch}_geno05_mind02.indlist \
+--make-bed \
+--out ${batch}_geno05_mind02_geno02_tmp
+
+awk 'NR==FNR {a[$1""$4""$5""$6] = $0; next} {key = $1""$4""$5""$6; if (key in a) print a[key]; else print $0}' $ref.bim $preqcdir/${batch}_geno05_mind02_geno02.bim > $preqcdir/${batch}_geno05_mind02_geno02_tmp.bim
 
 $PLINK \
---bfile ${batch}_geno05_mind02_geno02 \
+--bfile ${batch}_geno05_mind02_geno02_tmp \
 --make-bed \
 --out ${batch}_geno05_mind02_geno02_rsid
+
+rm *tmp*
 
 ######
 # Summarize number of samples and SNPs removed at each step
