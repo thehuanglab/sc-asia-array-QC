@@ -49,7 +49,7 @@ This repository details the quality control (QC) pipeline of the Stanley Center 
 - HWE: > 1e-10
 - SNP-level call rate: > 0.98
 
-## Population Assignment Check
-- **Select common, high-quality SNPs for population inference**:
+### Population Assignment Check
+- Select common, high-quality SNPs for population inference:
   - SNP-level call rate > 0.98
   - Remove strand ambiguous SNPs and long-range LD regions (chr6:25-35Mb; chr8:7-13Mb inversion)
