@@ -6,17 +6,18 @@ Peterson, R. E., Kuchenbaecker, K., Walters, R. K., Chen, C.-Y., Popejoy, A. B.,
 ## Contributors
 
 - Yu Chen (@yu-1011)
+- Reference: https://github.com/Annefeng/PBK-QC-pipeline
 
 ## QC Pipeline
 
 ### Sample QC
-- Sample-level call rate**: > 0.98
-- Remove samples that fail sex check**: `--check-sex`
-- Absolute value of autosomal heterozygosity rate deviating from the mean**: e.g., 3SD; `--het`
-- Identify unrelated individuals (Pi_hat < 0.2) within Asian samples**
+- Sample-level call rate: > 0.98
+- Remove samples that fail sex check: `--check-sex`
+- Absolute value of autosomal heterozygosity rate deviating from the mean: e.g., 3SD; `--het`
+- Identify unrelated individuals (Pi_hat < 0.2) within Asian samples
 
 ### Variants QC
-- SNP-level call rate**: > 0.98
+- SNP-level call rate: > 0.98
 - HWE: > 1e-10
 - Retain only SNPs: Excluding indels and monomorphic SNPs (for imputation; HRC: SNP only)
 - For chromosome X:
@@ -42,8 +43,8 @@ Peterson, R. E., Kuchenbaecker, K., Walters, R. K., Chen, C.-Y., Popejoy, A. B.,
   - Mixed Genotypes Check: Verifies if the number of mixed genotypes (e.g., 1/.) is < 10 %.
 
 ### Post-imputation QC (Converting vcf dosages to plink hard-call genotypes)
-- INFO score/Imputation R2**: > 0.8
-- MAF (based on imputed dosages)**: > 1%
+- INFO score/Imputation R2: > 0.8
+- MAF (based on imputed dosages): > 1%
 - HWE: > 1e-10
 - SNP-level call rate: > 0.98
 
