@@ -1,12 +1,13 @@
 # sc-asia-array-QC
 This repository details the quality control (QC) pipeline of the Stanley Center Asia Initiative, which largely follows the recommendations described in:
 
-Peterson, R. E., Kuchenbaecker, K., Walters, R. K., Chen, C.-Y., Popejoy, A. B., Periyasamy, S., et al. (2019). Genome-wide Association Studies in Ancestrally Diverse Populations: Opportunities, Methods, Pitfalls, and Recommendations. Cell, 179(3), 589–603. http://doi.org/10.1016/j.cell.2019.08.051
+**For autosome**: Peterson, R. E., Kuchenbaecker, K., Walters, R. K., Chen, C.-Y., Popejoy, A. B., Periyasamy, S., et al. (2019). Genome-wide Association Studies in Ancestrally Diverse Populations: Opportunities, Methods, Pitfalls, and Recommendations. Cell, 179(3), 589–603. http://doi.org/10.1016/j.cell.2019.08.051
+
+**For X chromosome**: Khramtsova, Ekaterina A., et al. "Quality control and analytic best practices for testing genetic models of sex differences in large populations." Cell 186.10 (2023): 2044-2061. [https://www.sciencedirect.com/science/article/pii/S0092867423004105](https://www.sciencedirect.com/science/article/pii/S0092867423004105#sec2)
 
 ## Contributors
 
 - Yu Chen (@yu-1011)
-- Reference: https://github.com/Annefeng/PBK-QC-pipeline
 
 ## QC Pipeline
 
