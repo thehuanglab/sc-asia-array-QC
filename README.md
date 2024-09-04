@@ -38,7 +38,7 @@ This repository details the quality control (QC) pipeline of the Stanley Center 
 - Harmonize study data with HRC data
 - Convert plink to vcf by chromosome
 
-### Send Unrelated European Samples to Michigan Server for Imputation
+### Send Unrelated East Asian Samples to TOPMed Server for Imputation
 - Chromosome X:
   - Ploidy Check: Verifies if all variants in the nonPAR region are either haploid or diploid.
   - Mixed Genotypes Check: Verifies if the number of mixed genotypes (e.g., 1/.) is < 10 %.
