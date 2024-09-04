@@ -28,7 +28,7 @@ This repository details the quality control (QC) pipeline of the Stanley Center 
   - Remove sex-assoc SNPs: Variants are filtered if they have significantly different minor allele frequency between male and female controls.
 
 ### Population Assignment
-- Select common, high-quality SNPs for population inference**:
+- Select common, high-quality SNPs for population inference:
   - SNP-level call rate > 0.98
   - Remove strand ambiguous SNPs and long-range LD regions (chr6:25-35Mb; chr8:7-13Mb inversion)
   - Prune to < 100K independent SNPs
