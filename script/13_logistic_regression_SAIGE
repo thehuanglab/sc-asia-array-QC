@@ -1,0 +1,34 @@
+##### wzhou88/saige:1.3.5
+
+cohort=BioX30K
+bfile=BioX30K.QCed.202409.ldpr_maf5_50.5.0.2
+pheno=BioX30K.full_pheno_PC10.txt
+# step1:
+step1_fitNULLGLMM.R \
+  --plinkFile=${bfile} \
+  --phenoFile=${pheno} \
+  --phenoCol=SCZ \
+  --covarColList=SEX_new,PC1,PC2,PC3,PC4,PC5,PC6,PC7,PC8,PC9,PC10 \
+  --qCovarColList=SEX_new \
+  --sampleIDColinphenoFile=IID \
+  --traitType=binary \
+  --outputPrefix=step1_SCZ_${cohort}.pc10 \
+  --LOCO=TRUE \
+  --IsOverwriteVarianceRatioFile=TRUE \
+  --nThreads=64
+
+# step2:
+for i in {1..22}
+do
+step2_SPAtests.R \
+      --bedFile=BioX30K.QCed.202409.top10_var.bed \
+      --bimFile=BioX30K.QCed.202409.top10_var.bim \
+      --famFile=BioX30K.QCed.202409.top10_var.fam \
+      --chrom=${i} \
+      --GMMATmodelFile=step1_SCZ_BioX30K.pc10.rda \
+      --varianceRatioFile=step1_SCZ_BioX30K.pc10.varianceRatio.txt \
+      --SAIGEOutputFile=step2_SCZ_BioX30K.pc10.chr${i} \
+      --is_output_moreDetails=TRUE \
+      --AlleleOrder=alt-first \
+      --LOCO=TRUE
+done
