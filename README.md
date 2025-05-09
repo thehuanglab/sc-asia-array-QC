@@ -1,4 +1,4 @@
-# Sc-asia-array-QC
+# Sc-asia-array-GWAS
 This repository details the quality control (QC) pipeline of the Stanley Center Asia Initiative, which largely follows the recommendations described in:
 
 **For autosome**: Peterson, R. E., Kuchenbaecker, K., Walters, R. K., Chen, C.-Y., Popejoy, A. B., Periyasamy, S., et al. (2019). Genome-wide Association Studies in Ancestrally Diverse Populations: Opportunities, Methods, Pitfalls, and Recommendations. Cell, 179(3), 589–603. http://doi.org/10.1016/j.cell.2019.08.051
@@ -8,6 +8,7 @@ This repository details the quality control (QC) pipeline of the Stanley Center 
 ## Contributors
 
 - Yu Chen (@yu-1011)
+- Soyeon Kim (@soyeon-2023)
 
 ## QC Pipeline
 
