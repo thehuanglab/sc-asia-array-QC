@@ -1,0 +1,15 @@
+PLINK=/home/software/plink2
+batch=biox30k
+$PLINK \
+--bfile ${batch}_Imputed-rsid.rmDup.rmhet_rmsex_rmMZ_rmkin.chrX_nonpar.rmhwe \
+--mac 1 \
+--snps-only just-acgt \
+--pheno ${batch}.pheno.251030.Pheno12_Only.txt \
+--covar ${batch}_Imputed-rsid.rmDup.rmhet_rmsex_rmMZ_rmkin.chr1_22.pca.eigenvec \
+--covar-name PC1,PC2,PC3,PC4,PC5,PC6,PC7,PC8,PC9,PC10 \
+--threads 75 \
+--xchr-model 2 \
+--keep-females \
+--glm sex hide-covar \
+--out run_assoc_logistic/${batch}_scz.chrX_nonpar.model2
+#Use --keep-females and --keep-males separately, and then perform a meta-analysis using METAL.
