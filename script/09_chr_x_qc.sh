@@ -176,8 +176,8 @@ else
 	--out ${pop}_${batch}_unrel-ldpr_no_par_sexqc_merge
 fi
 
-# Significant diff in MAF between males and females only for binary traits and only in controls
-echo -e "Significant difference in MAF between males and females (only for binary traits and only in controls)"
+# Significant diff in MAF between males and females only for binary traits
+echo -e "Significant difference in MAF between males and females "
 echo "Extracting X chromosome"
 totx=$(awk '$1=="X" || $1==23 {print $0}' ${pop}_${batch}_unrel-ldpr_no_par_sexqc_merge.bim | wc -l)
 bonfx=$(echo "scale=20;$alpha/$totx" | bc)
