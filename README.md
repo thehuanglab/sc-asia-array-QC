@@ -24,7 +24,7 @@ This repository details the quality control (QC) pipeline of the Stanley Center 
 - Retain only SNPs: Excluding indels and monomorphic SNPs (for imputation; HRC: SNP only)
 - For chromosome X:
   - Remove PAR region: The PARs are frequently removed because, although on the sex chromosomes, they do not behave as strictly X or Y regions.
-  - Remove sex-specificity MAF SNPs: Variants are filtered if they have significantly different MAF between male and female.
+  - Remove sex-specificity HWE SNPs: Variants are filtered if they have significantly different HWE between male and female.
   - Remove sex-specificity missingness SNPs: Variants are filtered if they have significantly different missingness between male and female.
   - Remove sex-assoc SNPs: Variants are filtered if they have significantly different minor allele frequency between male and female.
 
