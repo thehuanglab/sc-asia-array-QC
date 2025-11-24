@@ -66,7 +66,6 @@ if [ $malenum -eq 0 ] || [ $femalenum -eq 0 ]; then
 	--bfile ${pop}_${batch}_unrel-ldpr_no_par \
 	--hardy \
 	--out ${pop}_${batch}_unrel-ldpr_no_par_1gender_hwe \
-	--filter-controls
 	cat ${pop}_${batch}_unrel-ldpr_no_par_1gender_hwe.hwe | grep ALL | awk -v bf=$bonf '$9<bf {print $2}' > ${fname}_1gender_snp.exclude
 
 	echo "Correlation between missingness and phenotype"
@@ -103,7 +102,6 @@ else
 	--bfile ${pop}_${batch}_unrel-ldpr_no_par_male \
 	--hardy \
 	--out ${pop}_${batch}_unrel-ldpr_no_par_male_hwe \
-	--filter-controls
 	cat ${pop}_${batch}_unrel-ldpr_no_par_male_hwe.hwe | grep ALL | awk -v bf=$bonf '$9<bf {print $2}' > ${pop}_${batch}_unrel-ldpr_no_par_male_snp.exclude
 
 	echo "Correlation between missingness and phenotype"
@@ -135,7 +133,6 @@ else
 	--bfile ${pop}_${batch}_unrel-ldpr_no_par_female \
 	--hardy \
 	--out ${pop}_${batch}_unrel-ldpr_no_par_female_hwe \
-	--filter-controls
 	cat ${pop}_${batch}_unrel-ldpr_no_par_female_hwe.hwe | grep ALL | awk -v bf=$bonf '$9<bf {print $2}' > ${pop}_${batch}_unrel-ldpr_no_par_female_snp.exclude
 
 	echo "Correlation between missingness and phenotype"
